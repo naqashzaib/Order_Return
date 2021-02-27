@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A660CB_accountsModelStoreContainer" CdmEntityContainer="DB_A660CB_accountsEntities">
+    <EntitySetMapping Name="bank_names">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.bank_names">
+        <MappingFragment StoreEntitySet="bank_names">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="branch_city" ColumnName="branch_city" />
+          <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+          <ScalarProperty Name="bank_id" ColumnName="bank_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="company_profile">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.company_profile">
+        <MappingFragment StoreEntitySet="company_profile">
+          <ScalarProperty Name="currency_units_id" ColumnName="currency_units_id" />
+          <ScalarProperty Name="companylogo" ColumnName="companylogo" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="logo_pic" ColumnName="logo_pic" />
+          <ScalarProperty Name="websitename" ColumnName="websitename" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email_sender" ColumnName="email_sender" />
+          <ScalarProperty Name="company_email" ColumnName="company_email" />
+          <ScalarProperty Name="stock_units_id" ColumnName="stock_units_id" />
+          <ScalarProperty Name="office_no" ColumnName="office_no" />
+          <ScalarProperty Name="cell_no" ColumnName="cell_no" />
+          <ScalarProperty Name="ntn_no" ColumnName="ntn_no" />
+          <ScalarProperty Name="tax_reg_no" ColumnName="tax_reg_no" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="company_rono" ColumnName="company_rono" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="company_type" ColumnName="company_type" />
+          <ScalarProperty Name="company_profile_id" ColumnName="company_profile_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_type">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.account_type">
+        <MappingFragment StoreEntitySet="account_type">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="categories" ColumnName="categories" />
+          <ScalarProperty Name="categorize" ColumnName="categorize" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="account_code" ColumnName="account_code" />
+          <ScalarProperty Name="account_type1" ColumnName="account_type" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cat_1">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.cat_1">
+        <MappingFragment StoreEntitySet="cat_1">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="Store_id" ColumnName="Store_id" />
+          <ScalarProperty Name="category1_code" ColumnName="category1_code" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="category1_name" ColumnName="category1_name" />
+          <ScalarProperty Name="cat1_id" ColumnName="cat1_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cat_2">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.cat_2">
+        <MappingFragment StoreEntitySet="cat_2">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="category2_code" ColumnName="category2_code" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="cat1_id" ColumnName="cat1_id" />
+          <ScalarProperty Name="category2_name" ColumnName="category2_name" />
+          <ScalarProperty Name="cat2_id" ColumnName="cat2_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cat_3">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.cat_3">
+        <MappingFragment StoreEntitySet="cat_3">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="cat1_id" ColumnName="cat1_id" />
+          <ScalarProperty Name="category3_code" ColumnName="category3_code" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="cat2_id" ColumnName="cat2_id" />
+          <ScalarProperty Name="category3_name" ColumnName="category3_name" />
+          <ScalarProperty Name="cat3_id" ColumnName="cat3_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cat_4">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.cat_4">
+        <MappingFragment StoreEntitySet="cat_4">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="cat1_id" ColumnName="cat1_id" />
+          <ScalarProperty Name="cat2_id" ColumnName="cat2_id" />
+          <ScalarProperty Name="category4_code" ColumnName="category4_code" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="cat3_id" ColumnName="cat3_id" />
+          <ScalarProperty Name="category4_name" ColumnName="category4_name" />
+          <ScalarProperty Name="cat4_id" ColumnName="cat4_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chart_of_account">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.chart_of_account">
+        <MappingFragment StoreEntitySet="chart_of_account">
+          <ScalarProperty Name="balance_type" ColumnName="balance_type" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="Consumed_chart_id" ColumnName="Consumed_chart_id" />
+          <ScalarProperty Name="editable" ColumnName="editable" />
+          <ScalarProperty Name="stock_unit_id" ColumnName="stock_unit_id" />
+          <ScalarProperty Name="Expense_id" ColumnName="Expense_id" />
+          <ScalarProperty Name="wip_chart_id" ColumnName="wip_chart_id" />
+          <ScalarProperty Name="cat4_id" ColumnName="cat4_id" />
+          <ScalarProperty Name="cat3_id" ColumnName="cat3_id" />
+          <ScalarProperty Name="cat2_id" ColumnName="cat2_id" />
+          <ScalarProperty Name="cat1_id" ColumnName="cat1_id" />
+          <ScalarProperty Name="finished_good" ColumnName="finished_good" />
+          <ScalarProperty Name="availableQuantity" ColumnName="availableQuantity" />
+          <ScalarProperty Name="autoentrydatetime" ColumnName="autoentrydatetime" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="account_no" ColumnName="account_no" />
+          <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+          <ScalarProperty Name="opening_balance" ColumnName="opening_balance" />
+          <ScalarProperty Name="account_discription" ColumnName="account_discription" />
+          <ScalarProperty Name="account_code" ColumnName="account_code" />
+          <ScalarProperty Name="account_name" ColumnName="account_name" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer_info">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.customer_info">
+        <MappingFragment StoreEntitySet="customer_info">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="autodatetime" ColumnName="autodatetime" />
+          <ScalarProperty Name="PAN" ColumnName="PAN" />
+          <ScalarProperty Name="GSTIN" ColumnName="GSTIN" />
+          <ScalarProperty Name="contact_no" ColumnName="contact_no" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="customer_info_id" ColumnName="customer_info_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manual_journal_entry">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.manual_journal_entry">
+        <MappingFragment StoreEntitySet="manual_journal_entry">
+          <ScalarProperty Name="services_description" ColumnName="services_description" />
+          <ScalarProperty Name="Particular" ColumnName="Particular" />
+          <ScalarProperty Name="voucher_invoice" ColumnName="voucher_invoice" />
+          <ScalarProperty Name="fsale_taxtotal" ColumnName="fsale_taxtotal" />
+          <ScalarProperty Name="fsale_tax" ColumnName="fsale_tax" />
+          <ScalarProperty Name="sale_taxtotal" ColumnName="sale_taxtotal" />
+          <ScalarProperty Name="sale_tax" ColumnName="sale_tax" />
+          <ScalarProperty Name="gate_outward_entry_id" ColumnName="gate_outward_entry_id" />
+          <ScalarProperty Name="wastage" ColumnName="wastage" />
+          <ScalarProperty Name="finish_good_chart_id" ColumnName="finish_good_chart_id" />
+          <ScalarProperty Name="recipt_entry_id" ColumnName="recipt_entry_id" />
+          <ScalarProperty Name="bags" ColumnName="bags" />
+          <ScalarProperty Name="inspection_no" ColumnName="inspection_no" />
+          <ScalarProperty Name="gate_inward_no" ColumnName="gate_inward_no" />
+          <ScalarProperty Name="quantity_credit" ColumnName="quantity_credit" />
+          <ScalarProperty Name="quantity_debit" ColumnName="quantity_debit" />
+          <ScalarProperty Name="vendorbillNo" ColumnName="vendorbillNo" />
+          <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
+          <ScalarProperty Name="currency_rate" ColumnName="currency_rate" />
+          <ScalarProperty Name="trade_type" ColumnName="trade_type" />
+          <ScalarProperty Name="no_of_installment" ColumnName="no_of_installment" />
+          <ScalarProperty Name="gross_weight" ColumnName="gross_weight" />
+          <ScalarProperty Name="stock_units_id" ColumnName="stock_units_id" />
+          <ScalarProperty Name="currency_units_id" ColumnName="currency_units_id" />
+          <ScalarProperty Name="port_of_discharge" ColumnName="port_of_discharge" />
+          <ScalarProperty Name="port_of_loading" ColumnName="port_of_loading" />
+          <ScalarProperty Name="stock_in_trade_id" ColumnName="stock_in_trade_id" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="grandTotal" ColumnName="grandTotal" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="subTotal" ColumnName="subTotal" />
+          <ScalarProperty Name="billDueDtae" ColumnName="billDueDtae" />
+          <ScalarProperty Name="billDate" ColumnName="billDate" />
+          <ScalarProperty Name="orderNo" ColumnName="orderNo" />
+          <ScalarProperty Name="attachment" ColumnName="attachment" />
+          <ScalarProperty Name="billNo" ColumnName="billNo" />
+          <ScalarProperty Name="autoentrydatetime" ColumnName="autoentrydatetime" />
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="credit" ColumnName="credit" />
+          <ScalarProperty Name="debit" ColumnName="debit" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="chart_id1" ColumnName="chart_id1" />
+          <ScalarProperty Name="manual_journal_entry_id" ColumnName="manual_journal_entry_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manual_journal_info">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.manual_journal_info">
+        <MappingFragment StoreEntitySet="manual_journal_info">
+          <ScalarProperty Name="chart_id1" ColumnName="chart_id1" />
+          <ScalarProperty Name="billNo" ColumnName="billNo" />
+          <ScalarProperty Name="trade_type" ColumnName="trade_type" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="vendor_chart_id" ColumnName="vendor_chart_id" />
+          <ScalarProperty Name="paid_status" ColumnName="paid_status" />
+          <ScalarProperty Name="postdated_date" ColumnName="postdated_date" />
+          <ScalarProperty Name="post_dated_cheque_status" ColumnName="post_dated_cheque_status" />
+          <ScalarProperty Name="stock_entry_date" ColumnName="stock_entry_date" />
+          <ScalarProperty Name="purchase_invoice_no" ColumnName="purchase_invoice_no" />
+          <ScalarProperty Name="sale_invoice_no" ColumnName="sale_invoice_no" />
+          <ScalarProperty Name="finishgood_type" ColumnName="finishgood_type" />
+          <ScalarProperty Name="customer_invoice_no" ColumnName="customer_invoice_no" />
+          <ScalarProperty Name="warehouse_Issue_no" ColumnName="warehouse_Issue_no" />
+          <ScalarProperty Name="store_Issue_no" ColumnName="store_Issue_no" />
+          <ScalarProperty Name="wip_issue_no" ColumnName="wip_issue_no" />
+          <ScalarProperty Name="raw_issue_no" ColumnName="raw_issue_no" />
+          <ScalarProperty Name="stock_store_recipt_no" ColumnName="stock_store_recipt_no" />
+          <ScalarProperty Name="inspection_report_no" ColumnName="inspection_report_no" />
+          <ScalarProperty Name="gate_inward_outward_no" ColumnName="gate_inward_outward_no" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="modified_userip" ColumnName="modified_userip" />
+          <ScalarProperty Name="userip" ColumnName="userip" />
+          <ScalarProperty Name="modified_date" ColumnName="modified_date" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="creatd_date" ColumnName="creatd_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="voucher_invoice" ColumnName="voucher_invoice" />
+          <ScalarProperty Name="autoentrydatetime" ColumnName="autoentrydatetime" />
+          <ScalarProperty Name="voucher_id" ColumnName="voucher_id" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stock_units">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.stock_units">
+        <MappingFragment StoreEntitySet="stock_units">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="autodatetime" ColumnName="autodatetime" />
+          <ScalarProperty Name="stock_unit_name" ColumnName="stock_unit_name" />
+          <ScalarProperty Name="stock_units_id" ColumnName="stock_units_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="voucherTypes">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.voucherType">
+        <MappingFragment StoreEntitySet="voucherTypes">
+          <ScalarProperty Name="autotime" ColumnName="autotime" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="abbreviation" ColumnName="abbreviation" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+          <ScalarProperty Name="voucher_id" ColumnName="voucher_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="currency_units">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.currency_units">
+        <MappingFragment StoreEntitySet="currency_units">
+          <ScalarProperty Name="autodatetime" ColumnName="autodatetime" />
+          <ScalarProperty Name="unit_titlecode" ColumnName="unit_titlecode" />
+          <ScalarProperty Name="unit_sign" ColumnName="unit_sign" />
+          <ScalarProperty Name="unit_name" ColumnName="unit_name" />
+          <ScalarProperty Name="cuntry_name" ColumnName="cuntry_name" />
+          <ScalarProperty Name="currency_units_id" ColumnName="currency_units_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temp_config">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.temp_config">
+        <MappingFragment StoreEntitySet="temp_config">
+          <ScalarProperty Name="company_text_color" ColumnName="company_text_color" />
+          <ScalarProperty Name="table_header_bg" ColumnName="table_header_bg" />
+          <ScalarProperty Name="handding_color" ColumnName="handding_color" />
+          <ScalarProperty Name="font_style" ColumnName="font_style" />
+          <ScalarProperty Name="background_color" ColumnName="background_color" />
+          <ScalarProperty Name="temp_status" ColumnName="temp_status" />
+          <ScalarProperty Name="tem_id" ColumnName="tem_id" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="user_temp_design_id" ColumnName="user_temp_design_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temp_invoices_structure">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.temp_invoices_structure">
+        <MappingFragment StoreEntitySet="temp_invoices_structure">
+          <ScalarProperty Name="footer_div" ColumnName="footer_div" />
+          <ScalarProperty Name="table_div" ColumnName="table_div" />
+          <ScalarProperty Name="invoice_div" ColumnName="invoice_div" />
+          <ScalarProperty Name="header_div" ColumnName="header_div" />
+          <ScalarProperty Name="temp_Invoice_Name" ColumnName="temp_Invoice_Name" />
+          <ScalarProperty Name="tem_id" ColumnName="tem_id" />
+          <ScalarProperty Name="temp_Invoice_id" ColumnName="temp_Invoice_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="template_design">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.template_design">
+        <MappingFragment StoreEntitySet="template_design">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="body" ColumnName="body" />
+          <ScalarProperty Name="tem_id" ColumnName="tem_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logins">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="package_type" ColumnName="package_type" />
+          <ScalarProperty Name="forgot_key" ColumnName="forgot_key" />
+          <ScalarProperty Name="googleid" ColumnName="googleid" />
+          <ScalarProperty Name="verify_key" ColumnName="verify_key" />
+          <ScalarProperty Name="active_ac" ColumnName="active_ac" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="email_request">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.email_request">
+        <MappingFragment StoreEntitySet="email_request">
+          <ScalarProperty Name="expiry_date_time" ColumnName="expiry_date_time" />
+          <ScalarProperty Name="email_request_status" ColumnName="email_request_status" />
+          <ScalarProperty Name="verify_type" ColumnName="verify_type" />
+          <ScalarProperty Name="email_request_code" ColumnName="email_request_code" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="email_request_id" ColumnName="email_request_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="addmodules">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.addmodule">
+        <MappingFragment StoreEntitySet="addmodules">
+          <ScalarProperty Name="setOrder" ColumnName="setOrder" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="module_icon_name" ColumnName="module_icon_name" />
+          <ScalarProperty Name="module_name" ColumnName="module_name" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="analysis_report">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.analysis_report">
+        <MappingFragment StoreEntitySet="analysis_report">
+          <ScalarProperty Name="manual_journal_entry_id" ColumnName="manual_journal_entry_id" />
+          <ScalarProperty Name="genral_analysis_report_id" ColumnName="genral_analysis_report_id" />
+          <ScalarProperty Name="analysis_report_date" ColumnName="analysis_report_date" />
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="analysis_invoice_no" ColumnName="analysis_invoice_no" />
+          <ScalarProperty Name="analysis_inspection_date" ColumnName="analysis_inspection_date" />
+          <ScalarProperty Name="analysis_production_date" ColumnName="analysis_production_date" />
+          <ScalarProperty Name="analysis_inspector" ColumnName="analysis_inspector" />
+          <ScalarProperty Name="analysis_feedback" ColumnName="analysis_feedback" />
+          <ScalarProperty Name="analysis__packing_detail" ColumnName="analysis__packing_detail" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="analysis_item_code" ColumnName="analysis_item_code" />
+          <ScalarProperty Name="analysis__lot_no" ColumnName="analysis__lot_no" />
+          <ScalarProperty Name="analysis_container_no" ColumnName="analysis_container_no" />
+          <ScalarProperty Name="analysis_report_id" ColumnName="analysis_report_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="attachments">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.attachment">
+        <MappingFragment StoreEntitySet="attachments">
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="attachment_id" ColumnName="attachment_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bl_company">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.bl_company">
+        <MappingFragment StoreEntitySet="bl_company">
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="bl_company_name" ColumnName="bl_company_name" />
+          <ScalarProperty Name="bl_company1" ColumnName="bl_company" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bl_documents_attachments">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.bl_documents_attachments">
+        <MappingFragment StoreEntitySet="bl_documents_attachments">
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="bl_attachment_name" ColumnName="bl_attachment_name" />
+          <ScalarProperty Name="bl_documents_attachments_id" ColumnName="bl_documents_attachments_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="certificate_of_origion_attachments">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.certificate_of_origion_attachments">
+        <MappingFragment StoreEntitySet="certificate_of_origion_attachments">
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="certificate_of_origion_attachments_name" ColumnName="certificate_of_origion_attachments_name" />
+          <ScalarProperty Name="certificate_of_origion_attachments1" ColumnName="certificate_of_origion_attachments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="containers">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.container">
+        <MappingFragment StoreEntitySet="container">
+          <ScalarProperty Name="container_no" ColumnName="container_no" />
+          <ScalarProperty Name="manual_journal_entry_id" ColumnName="manual_journal_entry_id" />
+          <ScalarProperty Name="invoice_no" ColumnName="invoice_no" />
+          <ScalarProperty Name="container_id" ColumnName="container_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries_Name">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.Countries_Name">
+        <MappingFragment StoreEntitySet="Countries_Name">
+          <ScalarProperty Name="currencies_symbol" ColumnName="currencies_symbol" />
+          <ScalarProperty Name="currencies_name" ColumnName="currencies_name" />
+          <ScalarProperty Name="currencies_code" ColumnName="currencies_code" />
+          <ScalarProperty Name="callingCodes" ColumnName="callingCodes" />
+          <ScalarProperty Name="alpha3Code" ColumnName="alpha3Code" />
+          <ScalarProperty Name="alpha2Code" ColumnName="alpha2Code" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="finished_goods_names">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.finished_goods_names">
+        <MappingFragment StoreEntitySet="finished_goods_names">
+          <ScalarProperty Name="autodatetime" ColumnName="autodatetime" />
+          <ScalarProperty Name="availableQuantity" ColumnName="availableQuantity" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="good_name" ColumnName="good_name" />
+          <ScalarProperty Name="finished_goods_names_id" ColumnName="finished_goods_names_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genral_analysis_report">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.genral_analysis_report">
+        <MappingFragment StoreEntitySet="genral_analysis_report">
+          <ScalarProperty Name="genral_report_date" ColumnName="genral_report_date" />
+          <ScalarProperty Name="genral_analysis_report_id" ColumnName="genral_analysis_report_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inspection_attechment">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.inspection_attechment">
+        <MappingFragment StoreEntitySet="inspection_attechment">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="inspection_report_main_id" ColumnName="inspection_report_main_id" />
+          <ScalarProperty Name="attachemtn_name" ColumnName="attachemtn_name" />
+          <ScalarProperty Name="inspection_attechment_id" ColumnName="inspection_attechment_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inspection_Products_entries">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.inspection_Products_entries">
+        <MappingFragment StoreEntitySet="inspection_Products_entries">
+          <ScalarProperty Name="inspection_report_main_id" ColumnName="inspection_report_main_id" />
+          <ScalarProperty Name="stock_units_name" ColumnName="stock_units_name" />
+          <ScalarProperty Name="stock_units_id" ColumnName="stock_units_id" />
+          <ScalarProperty Name="inward_gatepass_entries_id" ColumnName="inward_gatepass_entries_id" />
+          <ScalarProperty Name="inward_gatepass_main_id" ColumnName="inward_gatepass_main_id" />
+          <ScalarProperty Name="net_weight" ColumnName="net_weight" />
+          <ScalarProperty Name="gross_weight" ColumnName="gross_weight" />
+          <ScalarProperty Name="item_name" ColumnName="item_name" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="inspection_Products_entries_id" ColumnName="inspection_Products_entries_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inspection_report_main">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.inspection_report_main">
+        <MappingFragment StoreEntitySet="inspection_report_main">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="modified_userip" ColumnName="modified_userip" />
+          <ScalarProperty Name="userip" ColumnName="userip" />
+          <ScalarProperty Name="modified_date" ColumnName="modified_date" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="creatd_date" ColumnName="creatd_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="inward_gatepass_main_id" ColumnName="inward_gatepass_main_id" />
+          <ScalarProperty Name="pass_invoice_no" ColumnName="pass_invoice_no" />
+          <ScalarProperty Name="inspection_inv_no" ColumnName="inspection_inv_no" />
+          <ScalarProperty Name="inspection_report_date" ColumnName="inspection_report_date" />
+          <ScalarProperty Name="inspection_report_main_id" ColumnName="inspection_report_main_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inspection_tests">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.inspection_tests">
+        <MappingFragment StoreEntitySet="inspection_tests">
+          <ScalarProperty Name="test_name" ColumnName="test_name" />
+          <ScalarProperty Name="inspection_tests_id" ColumnName="inspection_tests_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inspection_tests_entries">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.inspection_tests_entries">
+        <MappingFragment StoreEntitySet="inspection_tests_entries">
+          <ScalarProperty Name="inspection_report_main_id" ColumnName="inspection_report_main_id" />
+          <ScalarProperty Name="inward_gatepass_main_id" ColumnName="inward_gatepass_main_id" />
+          <ScalarProperty Name="inspection_Products_entries_id" ColumnName="inspection_Products_entries_id" />
+          <ScalarProperty Name="westage_weight" ColumnName="westage_weight" />
+          <ScalarProperty Name="wastage_percentage" ColumnName="wastage_percentage" />
+          <ScalarProperty Name="rebate" ColumnName="rebate" />
+          <ScalarProperty Name="second_time" ColumnName="second_time" />
+          <ScalarProperty Name="first_time" ColumnName="first_time" />
+          <ScalarProperty Name="second_weight" ColumnName="second_weight" />
+          <ScalarProperty Name="first_weight" ColumnName="first_weight" />
+          <ScalarProperty Name="inspection_tests_id" ColumnName="inspection_tests_id" />
+          <ScalarProperty Name="inspection_tests_entries_id" ColumnName="inspection_tests_entries_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insurance_documents">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.insurance_documents">
+        <MappingFragment StoreEntitySet="insurance_documents">
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="insurance_type" ColumnName="insurance_type" />
+          <ScalarProperty Name="policy_NUmber" ColumnName="policy_NUmber" />
+          <ScalarProperty Name="insurance_company_name" ColumnName="insurance_company_name" />
+          <ScalarProperty Name="insurance_documents_id" ColumnName="insurance_documents_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insurance_documents_attachments">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.insurance_documents_attachments">
+        <MappingFragment StoreEntitySet="insurance_documents_attachments">
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="attachemtn_name" ColumnName="attachemtn_name" />
+          <ScalarProperty Name="insurance_documents_attachments_id" ColumnName="insurance_documents_attachments_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inward_gatepass_attachment">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.inward_gatepass_attachment">
+        <MappingFragment StoreEntitySet="inward_gatepass_attachment">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="inward_gatepass_entries_id" ColumnName="inward_gatepass_entries_id" />
+          <ScalarProperty Name="attachemtn_name" ColumnName="attachemtn_name" />
+          <ScalarProperty Name="inward_gatepass_attachment_id" ColumnName="inward_gatepass_attachment_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inward_gatepass_entries">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.inward_gatepass_entries">
+        <MappingFragment StoreEntitySet="inward_gatepass_entries">
+          <ScalarProperty Name="stock_units_id" ColumnName="stock_units_id" />
+          <ScalarProperty Name="discription_vehicleno" ColumnName="discription_vehicleno" />
+          <ScalarProperty Name="driver_cell" ColumnName="driver_cell" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="inward_gatepass_main_id" ColumnName="inward_gatepass_main_id" />
+          <ScalarProperty Name="total_weight" ColumnName="total_weight" />
+          <ScalarProperty Name="weight_per_bag" ColumnName="weight_per_bag" />
+          <ScalarProperty Name="bags" ColumnName="bags" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="inward_gatepass_entries_id" ColumnName="inward_gatepass_entries_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inward_gatepass_main">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.inward_gatepass_main">
+        <MappingFragment StoreEntitySet="inward_gatepass_main">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="entry_type" ColumnName="entry_type" />
+          <ScalarProperty Name="modified_userip" ColumnName="modified_userip" />
+          <ScalarProperty Name="userip" ColumnName="userip" />
+          <ScalarProperty Name="modified_date" ColumnName="modified_date" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="creatd_date" ColumnName="creatd_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="bility_no" ColumnName="bility_no" />
+          <ScalarProperty Name="entry_id" ColumnName="entry_id" />
+          <ScalarProperty Name="vehicle_rent" ColumnName="vehicle_rent" />
+          <ScalarProperty Name="rent_type" ColumnName="rent_type" />
+          <ScalarProperty Name="driver_cellno" ColumnName="driver_cellno" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
+          <ScalarProperty Name="pass_invoice_no" ColumnName="pass_invoice_no" />
+          <ScalarProperty Name="pass_date_to" ColumnName="pass_date_to" />
+          <ScalarProperty Name="pass_date" ColumnName="pass_date" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="inward_gatepass_main_id" ColumnName="inward_gatepass_main_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="packing_list">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.packing_list">
+        <MappingFragment StoreEntitySet="packing_list">
+          <ScalarProperty Name="manual_journal_entry_id" ColumnName="manual_journal_entry_id" />
+          <ScalarProperty Name="packing_llist_gross_weight" ColumnName="packing_llist_gross_weight" />
+          <ScalarProperty Name="packing_list_discription" ColumnName="packing_list_discription" />
+          <ScalarProperty Name="packing_list_container_no" ColumnName="packing_list_container_no" />
+          <ScalarProperty Name="packing_list_invoiceNo" ColumnName="packing_list_invoiceNo" />
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="tare_weight" ColumnName="tare_weight" />
+          <ScalarProperty Name="packing_list_date" ColumnName="packing_list_date" />
+          <ScalarProperty Name="no_of_bags" ColumnName="no_of_bags" />
+          <ScalarProperty Name="packing_list_id" ColumnName="packing_list_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="page_roles">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.page_roles">
+        <MappingFragment StoreEntitySet="page_roles">
+          <ScalarProperty Name="pr_date" ColumnName="pr_date" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+          <ScalarProperty Name="pr_urls" ColumnName="pr_urls" />
+          <ScalarProperty Name="pr_title" ColumnName="pr_title" />
+          <ScalarProperty Name="pr_id" ColumnName="pr_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="payment_followup">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.payment_followup">
+        <MappingFragment StoreEntitySet="payment_followup">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="autodatetime" ColumnName="autodatetime" />
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+          <ScalarProperty Name="payment_status" ColumnName="payment_status" />
+          <ScalarProperty Name="invoice_no" ColumnName="invoice_no" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+          <ScalarProperty Name="payment_amount" ColumnName="payment_amount" />
+          <ScalarProperty Name="payment_followup_id" ColumnName="payment_followup_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permission_role">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.permission_role">
+        <MappingFragment StoreEntitySet="permission_role">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="permission_action" ColumnName="permission_action" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="pr_id" ColumnName="pr_id" />
+          <ScalarProperty Name="permission_id" ColumnName="permission_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.Sale">
+        <MappingFragment StoreEntitySet="Sale">
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shipping_ports">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.shipping_ports">
+        <MappingFragment StoreEntitySet="shipping_ports">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="autodatetime" ColumnName="autodatetime" />
+          <ScalarProperty Name="countryShortName" ColumnName="countryShortName" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="port_name" ColumnName="port_name" />
+          <ScalarProperty Name="shipping_ports_id" ColumnName="shipping_ports_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stock_in_trade">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.stock_in_trade">
+        <MappingFragment StoreEntitySet="stock_in_trade">
+          <ScalarProperty Name="cat_name" ColumnName="cat_name" />
+          <ScalarProperty Name="stock_in_trade_id" ColumnName="stock_in_trade_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stock_quantity">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.stock_quantity">
+        <MappingFragment StoreEntitySet="stock_quantity">
+          <ScalarProperty Name="sold_status" ColumnName="sold_status" />
+          <ScalarProperty Name="stock_source" ColumnName="stock_source" />
+          <ScalarProperty Name="autodatetime" ColumnName="autodatetime" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="finished_goods_names_id" ColumnName="finished_goods_names_id" />
+          <ScalarProperty Name="stock_in_trade_id" ColumnName="stock_in_trade_id" />
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="manual_journal_entry_id" ColumnName="manual_journal_entry_id" />
+          <ScalarProperty Name="final_stock_in_trade_id" ColumnName="final_stock_in_trade_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock_recipt_attachments">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.Stock_recipt_attachments">
+        <MappingFragment StoreEntitySet="Stock_recipt_attachments">
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="attachment_id" ColumnName="attachment_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stock_status_change">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.stock_status_change">
+        <MappingFragment StoreEntitySet="stock_status_change">
+          <ScalarProperty Name="manual_journal_entry_id" ColumnName="manual_journal_entry_id" />
+          <ScalarProperty Name="manual_journal_info_id" ColumnName="manual_journal_info_id" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="autodatetime" ColumnName="autodatetime" />
+          <ScalarProperty Name="stock_in_trade_id" ColumnName="stock_in_trade_id" />
+          <ScalarProperty Name="stock_status_change_id" ColumnName="stock_status_change_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="taxes">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.tax">
+        <MappingFragment StoreEntitySet="tax">
+          <ScalarProperty Name="tax_rate" ColumnName="tax_rate" />
+          <ScalarProperty Name="tax_name" ColumnName="tax_name" />
+          <ScalarProperty Name="tax_id" ColumnName="tax_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transactions">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.transaction">
+        <MappingFragment StoreEntitySet="transactions">
+          <ScalarProperty Name="autoentrydatetime" ColumnName="autoentrydatetime" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="balance_credit" ColumnName="balance_credit" />
+          <ScalarProperty Name="balance_debit" ColumnName="balance_debit" />
+          <ScalarProperty Name="credit" ColumnName="credit" />
+          <ScalarProperty Name="debit" ColumnName="debit" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="transaction_id" ColumnName="transaction_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userroles">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.userrole">
+        <MappingFragment StoreEntitySet="userroles">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="role_name" ColumnName="role_name" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stock_types">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.stock_types">
+        <MappingFragment StoreEntitySet="stock_types">
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+          <ScalarProperty Name="stock__type_id" ColumnName="stock__type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewOpeningBalances">
+      <EntityTypeMapping TypeName="DB_A660CB_accountsModel.ViewOpeningBalance">
+        <MappingFragment StoreEntitySet="ViewOpeningBalance">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="credit" ColumnName="credit" />
+          <ScalarProperty Name="debit" ColumnName="debit" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="transaction_id" ColumnName="transaction_id" />
+          <ScalarProperty Name="chart_id" ColumnName="chart_id" />
+          <ScalarProperty Name="account_code" ColumnName="account_code" />
+          <ScalarProperty Name="account_name" ColumnName="account_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetHelpTextByKey" FunctionName="DB_A660CB_accountsModel.Store.spGetHelpTextByKey" />
+  </EntityContainerMapping>
+</Mapping>

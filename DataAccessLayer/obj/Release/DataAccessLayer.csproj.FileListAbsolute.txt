@@ -1,0 +1,44 @@
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\EntityFramework.dll
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\Newtonsoft.Json.dll
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\System.Net.Http.Formatting.dll
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\System.Web.Http.dll
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\EntityFramework.xml
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\Newtonsoft.Json.xml
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\System.Net.Http.Formatting.xml
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\bin\Release\System.Web.Http.xml
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+C:\Users\CH-NAQASH\Documents\Visual Studio 2017\Projects\TechnoPurAccounts\DataAccessLayer\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\DataAccessLayer.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\EntityFramework.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\EntityFramework.SqlServer.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Newtonsoft.Json.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\System.Net.Http.Formatting.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\System.Web.Http.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\EntityFramework.xml
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\EntityFramework.SqlServer.xml
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Newtonsoft.Json.xml
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\System.Net.Http.Formatting.xml
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\System.Web.Http.xml
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\obj\Release\DataAccessLayer.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.Cors.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.Security.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.Security.OAuth.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Owin.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\System.Web.Cors.dll
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.xml
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.Cors.xml
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.Security.xml
+D:\Naqash IT\Production\freelancing\TechnoPurAccounts\DataAccessLayer\bin\Release\Microsoft.Owin.Security.OAuth.xml

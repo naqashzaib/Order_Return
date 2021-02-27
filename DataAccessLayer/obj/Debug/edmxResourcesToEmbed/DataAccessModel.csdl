@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A660CB_accountsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DB_A660CB_accountsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bank_names" EntityType="DB_A660CB_accountsModel.bank_names" />
+    <EntitySet Name="company_profile" EntityType="DB_A660CB_accountsModel.company_profile" />
+    <EntitySet Name="account_type" EntityType="DB_A660CB_accountsModel.account_type" />
+    <EntitySet Name="cat_1" EntityType="DB_A660CB_accountsModel.cat_1" />
+    <EntitySet Name="cat_2" EntityType="DB_A660CB_accountsModel.cat_2" />
+    <EntitySet Name="cat_3" EntityType="DB_A660CB_accountsModel.cat_3" />
+    <EntitySet Name="cat_4" EntityType="DB_A660CB_accountsModel.cat_4" />
+    <EntitySet Name="chart_of_account" EntityType="DB_A660CB_accountsModel.chart_of_account" />
+    <EntitySet Name="customer_info" EntityType="DB_A660CB_accountsModel.customer_info" />
+    <EntitySet Name="manual_journal_entry" EntityType="DB_A660CB_accountsModel.manual_journal_entry" />
+    <EntitySet Name="manual_journal_info" EntityType="DB_A660CB_accountsModel.manual_journal_info" />
+    <EntitySet Name="stock_units" EntityType="DB_A660CB_accountsModel.stock_units" />
+    <EntitySet Name="voucherTypes" EntityType="DB_A660CB_accountsModel.voucherType" />
+    <EntitySet Name="currency_units" EntityType="DB_A660CB_accountsModel.currency_units" />
+    <EntitySet Name="temp_config" EntityType="DB_A660CB_accountsModel.temp_config" />
+    <EntitySet Name="temp_invoices_structure" EntityType="DB_A660CB_accountsModel.temp_invoices_structure" />
+    <EntitySet Name="template_design" EntityType="DB_A660CB_accountsModel.template_design" />
+    <EntitySet Name="logins" EntityType="DB_A660CB_accountsModel.login" />
+    <EntitySet Name="email_request" EntityType="DB_A660CB_accountsModel.email_request" />
+    <EntitySet Name="addmodules" EntityType="DB_A660CB_accountsModel.addmodule" />
+    <EntitySet Name="analysis_report" EntityType="DB_A660CB_accountsModel.analysis_report" />
+    <EntitySet Name="attachments" EntityType="DB_A660CB_accountsModel.attachment" />
+    <EntitySet Name="bl_company" EntityType="DB_A660CB_accountsModel.bl_company" />
+    <EntitySet Name="bl_documents_attachments" EntityType="DB_A660CB_accountsModel.bl_documents_attachments" />
+    <EntitySet Name="certificate_of_origion_attachments" EntityType="DB_A660CB_accountsModel.certificate_of_origion_attachments" />
+    <EntitySet Name="containers" EntityType="DB_A660CB_accountsModel.container" />
+    <EntitySet Name="Countries_Name" EntityType="DB_A660CB_accountsModel.Countries_Name" />
+    <EntitySet Name="Customers" EntityType="DB_A660CB_accountsModel.Customer" />
+    <EntitySet Name="finished_goods_names" EntityType="DB_A660CB_accountsModel.finished_goods_names" />
+    <EntitySet Name="genral_analysis_report" EntityType="DB_A660CB_accountsModel.genral_analysis_report" />
+    <EntitySet Name="inspection_attechment" EntityType="DB_A660CB_accountsModel.inspection_attechment" />
+    <EntitySet Name="inspection_Products_entries" EntityType="DB_A660CB_accountsModel.inspection_Products_entries" />
+    <EntitySet Name="inspection_report_main" EntityType="DB_A660CB_accountsModel.inspection_report_main" />
+    <EntitySet Name="inspection_tests" EntityType="DB_A660CB_accountsModel.inspection_tests" />
+    <EntitySet Name="inspection_tests_entries" EntityType="DB_A660CB_accountsModel.inspection_tests_entries" />
+    <EntitySet Name="insurance_documents" EntityType="DB_A660CB_accountsModel.insurance_documents" />
+    <EntitySet Name="insurance_documents_attachments" EntityType="DB_A660CB_accountsModel.insurance_documents_attachments" />
+    <EntitySet Name="inward_gatepass_attachment" EntityType="DB_A660CB_accountsModel.inward_gatepass_attachment" />
+    <EntitySet Name="inward_gatepass_entries" EntityType="DB_A660CB_accountsModel.inward_gatepass_entries" />
+    <EntitySet Name="inward_gatepass_main" EntityType="DB_A660CB_accountsModel.inward_gatepass_main" />
+    <EntitySet Name="packing_list" EntityType="DB_A660CB_accountsModel.packing_list" />
+    <EntitySet Name="page_roles" EntityType="DB_A660CB_accountsModel.page_roles" />
+    <EntitySet Name="payment_followup" EntityType="DB_A660CB_accountsModel.payment_followup" />
+    <EntitySet Name="permission_role" EntityType="DB_A660CB_accountsModel.permission_role" />
+    <EntitySet Name="Products" EntityType="DB_A660CB_accountsModel.Product" />
+    <EntitySet Name="Sales" EntityType="DB_A660CB_accountsModel.Sale" />
+    <EntitySet Name="shipping_ports" EntityType="DB_A660CB_accountsModel.shipping_ports" />
+    <EntitySet Name="stock_in_trade" EntityType="DB_A660CB_accountsModel.stock_in_trade" />
+    <EntitySet Name="stock_quantity" EntityType="DB_A660CB_accountsModel.stock_quantity" />
+    <EntitySet Name="Stock_recipt_attachments" EntityType="DB_A660CB_accountsModel.Stock_recipt_attachments" />
+    <EntitySet Name="stock_status_change" EntityType="DB_A660CB_accountsModel.stock_status_change" />
+    <EntitySet Name="taxes" EntityType="DB_A660CB_accountsModel.tax" />
+    <EntitySet Name="transactions" EntityType="DB_A660CB_accountsModel.transaction" />
+    <EntitySet Name="userroles" EntityType="DB_A660CB_accountsModel.userrole" />
+    <EntitySet Name="stock_types" EntityType="DB_A660CB_accountsModel.stock_types" />
+    <EntitySet Name="ViewOpeningBalances" EntityType="DB_A660CB_accountsModel.ViewOpeningBalance" />
+    <FunctionImport Name="spGetHelpTextByKey">
+      <Parameter Name="HelpTextKey" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="bank_names">
+    <Key>
+      <PropertyRef Name="bank_id" />
+    </Key>
+    <Property Name="bank_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bank_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="branch_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="login_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="company_profile">
+    <Key>
+      <PropertyRef Name="company_profile_id" />
+    </Key>
+    <Property Name="company_profile_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="company_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="company_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="company_rono" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="zip_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="province" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tax_reg_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ntn_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cell_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="office_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="stock_units_id" Type="Int32" />
+    <Property Name="company_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="email_sender" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="websitename" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="logo_pic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="login_id" Type="Int32" />
+    <Property Name="country_id" Type="Int32" />
+    <Property Name="companylogo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="currency_units_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="account_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="account_type1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="account_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="categorize" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="categories" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="login_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="cat_1">
+    <Key>
+      <PropertyRef Name="cat1_id" />
+    </Key>
+    <Property Name="cat1_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category1_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="type_id" Type="Int32" />
+    <Property Name="category1_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Store_id" Type="Int32" />
+    <Property Name="login_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="cat_2">
+    <Key>
+      <PropertyRef Name="cat2_id" />
+    </Key>
+    <Property Name="cat2_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category2_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cat1_id" Type="Int32" />
+    <Property Name="type_id" Type="Int32" />
+    <Property Name="category2_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="login_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="cat_3">
+    <Key>
+      <PropertyRef Name="cat3_id" />
+    </Key>
+    <Property Name="cat3_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category3_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cat2_id" Type="Int32" />
+    <Property Name="type_id" Type="Int32" />
+    <Property Name="category3_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cat1_id" Type="Int32" />
+    <Property Name="login_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="cat_4">
+    <Key>
+      <PropertyRef Name="cat4_id" />
+    </Key>
+    <Property Name="cat4_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category4_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cat3_id" Type="Int32" />
+    <Property Name="type_id" Type="Int32" />
+    <Property Name="category4_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cat2_id" Type="Int32" />
+    <Property Name="cat1_id" Type="Int32" />
+    <Property Name="login_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="chart_of_account">
+    <Key>
+      <PropertyRef Name="chart_id" />
+    </Key>
+    <Property Name="chart_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="account_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="account_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="account_discription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="opening_balance" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="bank_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="account_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="type_id" Type="Int32" Nullable="false" />
+    <Property Name="autoentrydatetime" Type="DateTime" Precision="7" />
+    <Property Name="availableQuantity" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="finished_good" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cat1_id" Type="Int32" />
+    <Property Name="cat2_id" Type="Int32" />
+    <Property Name="cat3_id" Type="Int32" />
+    <Property Name="cat4_id" Type="Int32" />
+    <Property Name="wip_chart_id" Type="Int32" />
+    <Property Name="Expense_id" Type="Int32" />
+    <Property Name="stock_unit_id" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="editable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Consumed_chart_id" Type="Int32" />
+    <Property Name="login_id" Type="Int32" />
+    <Property Name="balance_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="customer_info">
+    <Key>
+      <PropertyRef Name="customer_info_id" />
+    </Key>
+    <Property Name="customer_info_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="zip_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="contact_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GSTIN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="autodatetime" Type="DateTime" Precision="7" />
+    <Property Name="chart_id" Type="Int32" />
+    <Property Name="login_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="manual_journal_entry">
+    <Key>
+      <PropertyRef Name="manual_journal_entry_id" />
+    </Key>
+    <Property Name="manual_journal_entry_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chart_id1" Type="Int32" />
+    <Property Name="chart_id" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tax" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="debit" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="credit" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="balance" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+    <Property Name="autoentrydatetime" Type="DateTime" Precision="7" />
+    <Property Name="billNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="attachment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="orderNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="billDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="billDueDtae" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="subTotal" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="discount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="grandTotal" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="quantity" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="rate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="stock_in_trade_id" Type="Int32" />
+    <Property Name="port_of_loading" Type="Int32" />
+    <Property Name="port_of_discharge" Type="Int32" />
+    <Property Name="currency_units_id" Type="Int32" />
+    <Property Name="stock_units_id" Type="Int32" />
+    <Property Name="gross_weight" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="no_of_installment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="trade_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="currency_rate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vehicle_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vendorbillNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="quantity_debit" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="quantity_credit" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="gate_inward_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inspection_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="bags" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="recipt_entry_id" Type="Int32" />
+    <Property Name="finish_good_chart_id" Type="Int32" />
+    <Property Name="wastage" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="gate_outward_entry_id" Type="Int32" />
+    <Property Name="sale_tax" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="sale_taxtotal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fsale_tax" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fsale_taxtotal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="voucher_invoice" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Particular" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="services_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="manual_journal_info">
+    <Key>
+      <PropertyRef Name="manual_journal_info_id" />
+    </Key>
+    <Property Name="manual_journal_info_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Reference" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="voucher_id" Type="Int32" />
+    <Property Name="autoentrydatetime" Type="DateTime" Precision="7" />
+    <Property Name="voucher_invoice" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created_by" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="creatd_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="modified_by" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="modified_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="modified_userip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="gate_inward_outward_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inspection_report_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="stock_store_recipt_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="raw_issue_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="wip_issue_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="store_Issue_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="warehouse_Issue_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="customer_invoice_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="finishgood_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sale_invoice_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_invoice_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="stock_entry_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="post_dated_cheque_status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="postdated_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="paid_status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vendor_chart_id" Type="Int32" />
+    <Property Name="login_id" Type="Int32" />
+    <Property Name="trade_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="billNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="chart_id1" Type="Int32" />
+  </EntityType>
+  <EntityType Name="stock_units">
+    <Key>
+      <PropertyRef Name="stock_units_id" />
+    </Key>
+    <Property Name="stock_units_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stock_unit_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="autodatetime" Type="DateTime" Precision="7" />
+    <Property Name="login_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="voucherType">
+    <Key>
+      <PropertyRef Name="voucher_id" />
+    </Key>
+    <Property Name="voucher_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="abbreviation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="autotime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="currency_units">
+    <Key>
+      <PropertyRef Name="currency_units_id" />
+    </Key>
+    <Property Name="currency_units_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cuntry_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="unit_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="unit_sign" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="unit_titlecode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="autodatetime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="temp_config">
+    <Key>
+      <PropertyRef Name="user_temp_design_id" />
+    </Key>
+    <Property Name="user_temp_design_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="login_id" Type="Int32" Nullable="false" />
+    <Property Name="tem_id" Type="Int32" Nullable="false" />
+    <Property Name="temp_status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="background_color" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="font_style" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="handding_color" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="table_header_bg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="company_text_color" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="temp_invoices_structure">
+    <Key>
+      <PropertyRef Name="temp_Invoice_id" />
+    </Key>
+    <Property Name="temp_Invoice_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tem_id" Type="Int32" Nullable="false" />
+    <Property Name="temp_Invoice_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="header_div" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="invoice_div" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="table_div" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="footer_div" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="template_design">
+    <Key>
+      <PropertyRef Name="tem_id" />
+    </Key>
+    <Property Name="tem_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="login_id" />
+    </Key>
+    <Property Name="login_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="active_ac" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="verify_key" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="googleid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="forgot_key" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="package_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="email_request">
+    <Key>
+      <PropertyRef Name="email_request_id" />
+    </Key>
+    <Property Name="email_request_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="login_id" Type="Int32" />
+    <Property Name="email_request_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="verify_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="email_request_status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="expiry_date_time" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="addmodule">
+    <Key>
+      <PropertyRef Name="module_id" />
+    </Key>
+    <Property Name="module_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="module_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="module_icon_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="setOrder" Type="Int32" />
+  </EntityType>
+  <EntityType Name="analysis_report">
+    <Key>
+      <PropertyRef Name="analysis_report_id" />
+    </Key>
+    <Property Name="analysis_report_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="analysis_container_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="analysis__lot_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="analysis_item_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="chart_id" Type="Int32" />
+    <Property Name="analysis__packing_detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="analysis_feedback" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="analysis_inspector" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="analysis_production_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="analysis_inspection_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="analysis_invoice_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+    <Property Name="analysis_report_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="genral_analysis_report_id" Type="Int32" />
+    <Property Name="manual_journal_entry_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="attachment">
+    <Key>
+      <PropertyRef Name="attachment_id" />
+    </Key>
+    <Property Name="attachment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bl_company">
+    <Key>
+      <PropertyRef Name="bl_company1" />
+    </Key>
+    <Property Name="bl_company1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bl_company_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="bl_documents_attachments">
+    <Key>
+      <PropertyRef Name="bl_documents_attachments_id" />
+    </Key>
+    <Property Name="bl_documents_attachments_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bl_attachment_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="certificate_of_origion_attachments">
+    <Key>
+      <PropertyRef Name="certificate_of_origion_attachments1" />
+    </Key>
+    <Property Name="certificate_of_origion_attachments1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="certificate_of_origion_attachments_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="container">
+    <Key>
+      <PropertyRef Name="container_id" />
+    </Key>
+    <Property Name="container_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="invoice_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_entry_id" Type="Int32" />
+    <Property Name="container_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Countries_Name">
+    <Key>
+      <PropertyRef Name="country_id" />
+    </Key>
+    <Property Name="country_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="country_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="alpha2Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="alpha3Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="callingCodes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="currencies_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="currencies_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="currencies_symbol" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="finished_goods_names">
+    <Key>
+      <PropertyRef Name="finished_goods_names_id" />
+    </Key>
+    <Property Name="finished_goods_names_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="good_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="chart_id" Type="Int32" />
+    <Property Name="availableQuantity" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="autodatetime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="genral_analysis_report">
+    <Key>
+      <PropertyRef Name="genral_analysis_report_id" />
+    </Key>
+    <Property Name="genral_analysis_report_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="genral_report_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="inspection_attechment">
+    <Key>
+      <PropertyRef Name="inspection_attechment_id" />
+    </Key>
+    <Property Name="inspection_attechment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="attachemtn_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inspection_report_main_id" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="inspection_Products_entries">
+    <Key>
+      <PropertyRef Name="inspection_Products_entries_id" />
+    </Key>
+    <Property Name="inspection_Products_entries_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chart_id" Type="Int32" />
+    <Property Name="item_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="gross_weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="net_weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inward_gatepass_main_id" Type="Int32" />
+    <Property Name="inward_gatepass_entries_id" Type="Int32" />
+    <Property Name="stock_units_id" Type="Int32" />
+    <Property Name="stock_units_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inspection_report_main_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="inspection_report_main">
+    <Key>
+      <PropertyRef Name="inspection_report_main_id" />
+    </Key>
+    <Property Name="inspection_report_main_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="inspection_report_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inspection_inv_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pass_invoice_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inward_gatepass_main_id" Type="Int32" />
+    <Property Name="created_by" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="creatd_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="modified_by" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="modified_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="modified_userip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="inspection_tests">
+    <Key>
+      <PropertyRef Name="inspection_tests_id" />
+    </Key>
+    <Property Name="inspection_tests_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="test_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="inspection_tests_entries">
+    <Key>
+      <PropertyRef Name="inspection_tests_entries_id" />
+    </Key>
+    <Property Name="inspection_tests_entries_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="inspection_tests_id" Type="Int32" />
+    <Property Name="first_weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="second_weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="first_time" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="second_time" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rebate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="wastage_percentage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="westage_weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inspection_Products_entries_id" Type="Int32" />
+    <Property Name="inward_gatepass_main_id" Type="Int32" />
+    <Property Name="inspection_report_main_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="insurance_documents">
+    <Key>
+      <PropertyRef Name="insurance_documents_id" />
+    </Key>
+    <Property Name="insurance_documents_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="insurance_company_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="policy_NUmber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="insurance_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="insurance_documents_attachments">
+    <Key>
+      <PropertyRef Name="insurance_documents_attachments_id" />
+    </Key>
+    <Property Name="insurance_documents_attachments_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="attachemtn_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="inward_gatepass_attachment">
+    <Key>
+      <PropertyRef Name="inward_gatepass_attachment_id" />
+    </Key>
+    <Property Name="inward_gatepass_attachment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="attachemtn_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inward_gatepass_entries_id" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="inward_gatepass_entries">
+    <Key>
+      <PropertyRef Name="inward_gatepass_entries_id" />
+    </Key>
+    <Property Name="inward_gatepass_entries_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chart_id" Type="Int32" />
+    <Property Name="bags" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="weight_per_bag" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="total_weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="inward_gatepass_main_id" Type="Int32" />
+    <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="driver_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="driver_cell" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="discription_vehicleno" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="stock_units_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="inward_gatepass_main">
+    <Key>
+      <PropertyRef Name="inward_gatepass_main_id" />
+    </Key>
+    <Property Name="inward_gatepass_main_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chart_id" Type="Int32" />
+    <Property Name="pass_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pass_date_to" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pass_invoice_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vehicle_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="driver_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="driver_cellno" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rent_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vehicle_rent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="entry_id" Type="Int32" />
+    <Property Name="bility_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created_by" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="creatd_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="modified_by" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="modified_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="modified_userip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="entry_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="packing_list">
+    <Key>
+      <PropertyRef Name="packing_list_id" />
+    </Key>
+    <Property Name="packing_list_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="no_of_bags" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="packing_list_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tare_weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+    <Property Name="packing_list_invoiceNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="packing_list_container_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="packing_list_discription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="packing_llist_gross_weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_entry_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="page_roles">
+    <Key>
+      <PropertyRef Name="pr_id" />
+    </Key>
+    <Property Name="pr_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pr_title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pr_urls" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="module_id" Type="Int32" />
+    <Property Name="pr_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="payment_followup">
+    <Key>
+      <PropertyRef Name="payment_followup_id" />
+    </Key>
+    <Property Name="payment_followup_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="payment_amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="payment_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="chart_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="invoice_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="payment_status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="payment_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+    <Property Name="autodatetime" Type="DateTime" Precision="3" />
+    <Property Name="login_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="permission_role">
+    <Key>
+      <PropertyRef Name="permission_id" />
+    </Key>
+    <Property Name="permission_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pr_id" Type="Int32" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="permission_action" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="shipping_ports">
+    <Key>
+      <PropertyRef Name="shipping_ports_id" />
+    </Key>
+    <Property Name="shipping_ports_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="port_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="countryShortName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="autodatetime" Type="DateTime" Precision="7" />
+    <Property Name="login_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="stock_in_trade">
+    <Key>
+      <PropertyRef Name="stock_in_trade_id" />
+    </Key>
+    <Property Name="stock_in_trade_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cat_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="stock_quantity">
+    <Key>
+      <PropertyRef Name="final_stock_in_trade_id" />
+    </Key>
+    <Property Name="final_stock_in_trade_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="manual_journal_entry_id" Type="Int32" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+    <Property Name="stock_in_trade_id" Type="Int32" />
+    <Property Name="finished_goods_names_id" Type="Int32" />
+    <Property Name="quantity" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="autodatetime" Type="DateTime" Precision="7" />
+    <Property Name="stock_source" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sold_status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Stock_recipt_attachments">
+    <Key>
+      <PropertyRef Name="attachment_id" />
+    </Key>
+    <Property Name="attachment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="stock_status_change">
+    <Key>
+      <PropertyRef Name="stock_status_change_id" />
+    </Key>
+    <Property Name="stock_status_change_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stock_in_trade_id" Type="Int32" />
+    <Property Name="autodatetime" Type="DateTime" Precision="7" />
+    <Property Name="chart_id" Type="Int32" />
+    <Property Name="manual_journal_info_id" Type="Int32" />
+    <Property Name="manual_journal_entry_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tax">
+    <Key>
+      <PropertyRef Name="tax_id" />
+    </Key>
+    <Property Name="tax_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tax_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tax_rate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="transaction">
+    <Key>
+      <PropertyRef Name="transaction_id" />
+    </Key>
+    <Property Name="transaction_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="debit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="credit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="balance_debit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="balance_credit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="chart_id" Type="Int32" />
+    <Property Name="autoentrydatetime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="userrole">
+    <Key>
+      <PropertyRef Name="role_id" />
+    </Key>
+    <Property Name="role_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="role_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="stock_types">
+    <Key>
+      <PropertyRef Name="stock__type_id" />
+    </Key>
+    <Property Name="stock__type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ViewOpeningBalance">
+    <Key>
+      <PropertyRef Name="chart_id" />
+      <PropertyRef Name="transaction_id" />
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="account_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="account_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="chart_id" Type="Int32" Nullable="false" />
+    <Property Name="transaction_id" Type="Int32" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="debit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="credit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Expr1" Type="Int32" />
+    <Property Name="type_id" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

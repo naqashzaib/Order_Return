@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A660CB_accountsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="account_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="account_type" Type="varchar(max)" />
+    <Property Name="account_code" Type="varchar(max)" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="categorize" Type="varchar(max)" />
+    <Property Name="categories" Type="varchar(max)" />
+    <Property Name="login_id" Type="int" />
+  </EntityType>
+  <EntityType Name="addmodules">
+    <Key>
+      <PropertyRef Name="module_id" />
+    </Key>
+    <Property Name="module_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="module_name" Type="varchar(max)" />
+    <Property Name="module_icon_name" Type="varchar(max)" />
+    <Property Name="date" Type="date" />
+    <Property Name="setOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="analysis_report">
+    <Key>
+      <PropertyRef Name="analysis_report_id" />
+    </Key>
+    <Property Name="analysis_report_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="analysis_container_no" Type="varchar(max)" />
+    <Property Name="analysis__lot_no" Type="varchar(max)" />
+    <Property Name="analysis_item_code" Type="varchar(max)" />
+    <Property Name="chart_id" Type="int" />
+    <Property Name="analysis__packing_detail" Type="varchar(max)" />
+    <Property Name="analysis_feedback" Type="varchar(max)" />
+    <Property Name="analysis_inspector" Type="varchar(max)" />
+    <Property Name="analysis_production_date" Type="varchar(max)" />
+    <Property Name="analysis_inspection_date" Type="varchar(max)" />
+    <Property Name="analysis_invoice_no" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+    <Property Name="analysis_report_date" Type="varchar(max)" />
+    <Property Name="genral_analysis_report_id" Type="int" />
+    <Property Name="manual_journal_entry_id" Type="int" />
+  </EntityType>
+  <EntityType Name="attachments">
+    <Key>
+      <PropertyRef Name="attachment_id" />
+    </Key>
+    <Property Name="attachment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bank_names">
+    <Key>
+      <PropertyRef Name="bank_id" />
+    </Key>
+    <Property Name="bank_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bank_name" Type="varchar(max)" />
+    <Property Name="branch_city" Type="varchar(max)" />
+    <Property Name="login_id" Type="int" />
+  </EntityType>
+  <EntityType Name="bl_company">
+    <Key>
+      <PropertyRef Name="bl_company" />
+    </Key>
+    <Property Name="bl_company" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bl_company_name" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+  </EntityType>
+  <EntityType Name="bl_documents_attachments">
+    <Key>
+      <PropertyRef Name="bl_documents_attachments_id" />
+    </Key>
+    <Property Name="bl_documents_attachments_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bl_attachment_name" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+  </EntityType>
+  <EntityType Name="cat_1">
+    <Key>
+      <PropertyRef Name="cat1_id" />
+    </Key>
+    <Property Name="cat1_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category1_name" Type="varchar(max)" />
+    <Property Name="type_id" Type="int" />
+    <Property Name="category1_code" Type="varchar(max)" />
+    <Property Name="Store_id" Type="int" />
+    <Property Name="login_id" Type="int" />
+  </EntityType>
+  <EntityType Name="cat_2">
+    <Key>
+      <PropertyRef Name="cat2_id" />
+    </Key>
+    <Property Name="cat2_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category2_name" Type="varchar(max)" />
+    <Property Name="cat1_id" Type="int" />
+    <Property Name="type_id" Type="int" />
+    <Property Name="category2_code" Type="varchar(max)" />
+    <Property Name="login_id" Type="int" />
+  </EntityType>
+  <EntityType Name="cat_3">
+    <Key>
+      <PropertyRef Name="cat3_id" />
+    </Key>
+    <Property Name="cat3_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category3_name" Type="varchar(max)" />
+    <Property Name="cat2_id" Type="int" />
+    <Property Name="type_id" Type="int" />
+    <Property Name="category3_code" Type="varchar(max)" />
+    <Property Name="cat1_id" Type="int" />
+    <Property Name="login_id" Type="int" />
+  </EntityType>
+  <EntityType Name="cat_4">
+    <Key>
+      <PropertyRef Name="cat4_id" />
+    </Key>
+    <Property Name="cat4_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category4_name" Type="varchar(max)" />
+    <Property Name="cat3_id" Type="int" />
+    <Property Name="type_id" Type="int" />
+    <Property Name="category4_code" Type="varchar(max)" />
+    <Property Name="cat2_id" Type="int" />
+    <Property Name="cat1_id" Type="int" />
+    <Property Name="login_id" Type="int" />
+  </EntityType>
+  <EntityType Name="certificate_of_origion_attachments">
+    <Key>
+      <PropertyRef Name="certificate_of_origion_attachments" />
+    </Key>
+    <Property Name="certificate_of_origion_attachments" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="certificate_of_origion_attachments_name" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+  </EntityType>
+  <EntityType Name="chart_of_account">
+    <Key>
+      <PropertyRef Name="chart_id" />
+    </Key>
+    <Property Name="chart_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="account_name" Type="varchar(max)" />
+    <Property Name="account_code" Type="varchar(max)" />
+    <Property Name="account_discription" Type="varchar(max)" />
+    <Property Name="opening_balance" Type="varchar(max)" />
+    <Property Name="bank_name" Type="varchar(max)" />
+    <Property Name="account_no" Type="varchar(max)" />
+    <Property Name="type_id" Type="int" Nullable="false" />
+    <Property Name="autoentrydatetime" Type="datetime2" Precision="7" />
+    <Property Name="availableQuantity" Type="varchar(max)" />
+    <Property Name="finished_good" Type="varchar(max)" />
+    <Property Name="cat1_id" Type="int" />
+    <Property Name="cat2_id" Type="int" />
+    <Property Name="cat3_id" Type="int" />
+    <Property Name="cat4_id" Type="int" />
+    <Property Name="wip_chart_id" Type="int" />
+    <Property Name="Expense_id" Type="int" />
+    <Property Name="stock_unit_id" Type="varchar" MaxLength="50" />
+    <Property Name="editable" Type="varchar" MaxLength="50" />
+    <Property Name="Consumed_chart_id" Type="int" />
+    <Property Name="login_id" Type="int" />
+    <Property Name="balance_type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="company_profile">
+    <Key>
+      <PropertyRef Name="company_profile_id" />
+    </Key>
+    <Property Name="company_profile_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company_type" Type="varchar(max)" />
+    <Property Name="company_name" Type="varchar(max)" />
+    <Property Name="company_rono" Type="varchar(max)" />
+    <Property Name="address" Type="varchar(max)" />
+    <Property Name="city" Type="varchar(max)" />
+    <Property Name="zip_code" Type="varchar(max)" />
+    <Property Name="province" Type="varchar(max)" />
+    <Property Name="country" Type="varchar(max)" />
+    <Property Name="tax_reg_no" Type="varchar(max)" />
+    <Property Name="ntn_no" Type="varchar(max)" />
+    <Property Name="cell_no" Type="varchar(max)" />
+    <Property Name="office_no" Type="varchar(max)" />
+    <Property Name="stock_units_id" Type="int" />
+    <Property Name="company_email" Type="varchar(max)" />
+    <Property Name="email_sender" Type="varchar(max)" />
+    <Property Name="password" Type="varchar(max)" />
+    <Property Name="websitename" Type="varchar(max)" />
+    <Property Name="logo_pic" Type="varchar(max)" />
+    <Property Name="login_id" Type="int" />
+    <Property Name="country_id" Type="int" />
+    <Property Name="companylogo" Type="varchar(max)" />
+    <Property Name="currency_units_id" Type="int" />
+  </EntityType>
+  <EntityType Name="container">
+    <Key>
+      <PropertyRef Name="container_id" />
+    </Key>
+    <Property Name="container_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="invoice_no" Type="varchar(max)" />
+    <Property Name="manual_journal_entry_id" Type="int" />
+    <Property Name="container_no" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Countries_Name">
+    <Key>
+      <PropertyRef Name="country_id" />
+    </Key>
+    <Property Name="country_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="country_name" Type="varchar(max)" />
+    <Property Name="alpha2Code" Type="varchar(max)" />
+    <Property Name="alpha3Code" Type="varchar(max)" />
+    <Property Name="callingCodes" Type="varchar(max)" />
+    <Property Name="currencies_code" Type="varchar(max)" />
+    <Property Name="currencies_name" Type="varchar(max)" />
+    <Property Name="currencies_symbol" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="currency_units">
+    <Key>
+      <PropertyRef Name="currency_units_id" />
+    </Key>
+    <Property Name="currency_units_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cuntry_name" Type="varchar(max)" />
+    <Property Name="unit_name" Type="varchar(max)" />
+    <Property Name="unit_sign" Type="varchar(max)" />
+    <Property Name="unit_titlecode" Type="varchar(max)" />
+    <Property Name="autodatetime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="customer_info">
+    <Key>
+      <PropertyRef Name="customer_info_id" />
+    </Key>
+    <Property Name="customer_info_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="address" Type="varchar(max)" />
+    <Property Name="city" Type="varchar(max)" />
+    <Property Name="country" Type="varchar(max)" />
+    <Property Name="zip_code" Type="varchar(max)" />
+    <Property Name="contact_no" Type="varchar(max)" />
+    <Property Name="GSTIN" Type="varchar(max)" />
+    <Property Name="PAN" Type="varchar(max)" />
+    <Property Name="autodatetime" Type="datetime2" Precision="7" />
+    <Property Name="chart_id" Type="int" />
+    <Property Name="login_id" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="email_request">
+    <Key>
+      <PropertyRef Name="email_request_id" />
+    </Key>
+    <Property Name="email_request_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="login_id" Type="int" />
+    <Property Name="email_request_code" Type="varchar(max)" />
+    <Property Name="verify_type" Type="varchar(max)" />
+    <Property Name="email_request_status" Type="varchar(max)" />
+    <Property Name="expiry_date_time" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="finished_goods_names">
+    <Key>
+      <PropertyRef Name="finished_goods_names_id" />
+    </Key>
+    <Property Name="finished_goods_names_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="good_name" Type="varchar(max)" />
+    <Property Name="chart_id" Type="int" />
+    <Property Name="availableQuantity" Type="varchar(max)" />
+    <Property Name="autodatetime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="genral_analysis_report">
+    <Key>
+      <PropertyRef Name="genral_analysis_report_id" />
+    </Key>
+    <Property Name="genral_analysis_report_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="genral_report_date" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="inspection_attechment">
+    <Key>
+      <PropertyRef Name="inspection_attechment_id" />
+    </Key>
+    <Property Name="inspection_attechment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="attachemtn_name" Type="varchar(max)" />
+    <Property Name="inspection_report_main_id" Type="int" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="inspection_Products_entries">
+    <Key>
+      <PropertyRef Name="inspection_Products_entries_id" />
+    </Key>
+    <Property Name="inspection_Products_entries_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chart_id" Type="int" />
+    <Property Name="item_name" Type="varchar(max)" />
+    <Property Name="gross_weight" Type="varchar(max)" />
+    <Property Name="net_weight" Type="varchar(max)" />
+    <Property Name="inward_gatepass_main_id" Type="int" />
+    <Property Name="inward_gatepass_entries_id" Type="int" />
+    <Property Name="stock_units_id" Type="int" />
+    <Property Name="stock_units_name" Type="varchar(max)" />
+    <Property Name="inspection_report_main_id" Type="int" />
+  </EntityType>
+  <EntityType Name="inspection_report_main">
+    <Key>
+      <PropertyRef Name="inspection_report_main_id" />
+    </Key>
+    <Property Name="inspection_report_main_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="inspection_report_date" Type="varchar(max)" />
+    <Property Name="inspection_inv_no" Type="varchar(max)" />
+    <Property Name="pass_invoice_no" Type="varchar(max)" />
+    <Property Name="inward_gatepass_main_id" Type="int" />
+    <Property Name="created_by" Type="varchar(max)" />
+    <Property Name="creatd_date" Type="varchar(max)" />
+    <Property Name="modified_by" Type="varchar(max)" />
+    <Property Name="modified_date" Type="varchar(max)" />
+    <Property Name="userip" Type="varchar(max)" />
+    <Property Name="modified_userip" Type="varchar(max)" />
+    <Property Name="status" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="inspection_tests">
+    <Key>
+      <PropertyRef Name="inspection_tests_id" />
+    </Key>
+    <Property Name="inspection_tests_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="test_name" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="inspection_tests_entries">
+    <Key>
+      <PropertyRef Name="inspection_tests_entries_id" />
+    </Key>
+    <Property Name="inspection_tests_entries_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="inspection_tests_id" Type="int" />
+    <Property Name="first_weight" Type="varchar(max)" />
+    <Property Name="second_weight" Type="varchar(max)" />
+    <Property Name="first_time" Type="varchar(max)" />
+    <Property Name="second_time" Type="varchar(max)" />
+    <Property Name="rebate" Type="varchar(max)" />
+    <Property Name="wastage_percentage" Type="varchar(max)" />
+    <Property Name="westage_weight" Type="varchar(max)" />
+    <Property Name="inspection_Products_entries_id" Type="int" />
+    <Property Name="inward_gatepass_main_id" Type="int" />
+    <Property Name="inspection_report_main_id" Type="int" />
+  </EntityType>
+  <EntityType Name="insurance_documents">
+    <Key>
+      <PropertyRef Name="insurance_documents_id" />
+    </Key>
+    <Property Name="insurance_documents_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="insurance_company_name" Type="varchar(max)" />
+    <Property Name="policy_NUmber" Type="varchar(max)" />
+    <Property Name="insurance_type" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+  </EntityType>
+  <EntityType Name="insurance_documents_attachments">
+    <Key>
+      <PropertyRef Name="insurance_documents_attachments_id" />
+    </Key>
+    <Property Name="insurance_documents_attachments_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="attachemtn_name" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+  </EntityType>
+  <EntityType Name="inward_gatepass_attachment">
+    <Key>
+      <PropertyRef Name="inward_gatepass_attachment_id" />
+    </Key>
+    <Property Name="inward_gatepass_attachment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="attachemtn_name" Type="varchar(max)" />
+    <Property Name="inward_gatepass_entries_id" Type="int" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="inward_gatepass_entries">
+    <Key>
+      <PropertyRef Name="inward_gatepass_entries_id" />
+    </Key>
+    <Property Name="inward_gatepass_entries_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chart_id" Type="int" />
+    <Property Name="bags" Type="varchar(max)" />
+    <Property Name="weight_per_bag" Type="varchar(max)" />
+    <Property Name="total_weight" Type="varchar(max)" />
+    <Property Name="inward_gatepass_main_id" Type="int" />
+    <Property Name="type" Type="varchar(max)" />
+    <Property Name="category" Type="varchar(max)" />
+    <Property Name="driver_name" Type="varchar(max)" />
+    <Property Name="driver_cell" Type="varchar(max)" />
+    <Property Name="discription_vehicleno" Type="varchar(max)" />
+    <Property Name="stock_units_id" Type="int" />
+  </EntityType>
+  <EntityType Name="inward_gatepass_main">
+    <Key>
+      <PropertyRef Name="inward_gatepass_main_id" />
+    </Key>
+    <Property Name="inward_gatepass_main_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chart_id" Type="int" />
+    <Property Name="pass_date" Type="varchar(max)" />
+    <Property Name="pass_date_to" Type="varchar(max)" />
+    <Property Name="pass_invoice_no" Type="varchar(max)" />
+    <Property Name="vehicle_no" Type="varchar(max)" />
+    <Property Name="driver_name" Type="varchar(max)" />
+    <Property Name="driver_cellno" Type="varchar(max)" />
+    <Property Name="rent_type" Type="varchar(max)" />
+    <Property Name="vehicle_rent" Type="varchar(max)" />
+    <Property Name="entry_id" Type="int" />
+    <Property Name="bility_no" Type="varchar(max)" />
+    <Property Name="created_by" Type="varchar(max)" />
+    <Property Name="creatd_date" Type="varchar(max)" />
+    <Property Name="modified_by" Type="varchar(max)" />
+    <Property Name="modified_date" Type="varchar(max)" />
+    <Property Name="userip" Type="varchar(max)" />
+    <Property Name="modified_userip" Type="varchar(max)" />
+    <Property Name="entry_type" Type="varchar(max)" />
+    <Property Name="status" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="login_id" />
+    </Key>
+    <Property Name="login_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar(max)" />
+    <Property Name="password" Type="varchar(max)" />
+    <Property Name="email" Type="varchar(max)" />
+    <Property Name="role_id" Type="int" />
+    <Property Name="date" Type="varchar(max)" />
+    <Property Name="status" Type="varchar(max)" />
+    <Property Name="active_ac" Type="varchar(max)" />
+    <Property Name="verify_key" Type="varchar(max)" />
+    <Property Name="googleid" Type="varchar(max)" />
+    <Property Name="forgot_key" Type="varchar(max)" />
+    <Property Name="package_type" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="manual_journal_entry">
+    <Key>
+      <PropertyRef Name="manual_journal_entry_id" />
+    </Key>
+    <Property Name="manual_journal_entry_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chart_id1" Type="int" />
+    <Property Name="chart_id" Type="int" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="contact" Type="varchar(max)" />
+    <Property Name="tax" Type="varchar(max)" />
+    <Property Name="debit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="credit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="balance" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+    <Property Name="autoentrydatetime" Type="datetime2" Precision="7" />
+    <Property Name="billNo" Type="varchar(max)" />
+    <Property Name="attachment" Type="varchar(max)" />
+    <Property Name="orderNo" Type="varchar(max)" />
+    <Property Name="billDate" Type="varchar(max)" />
+    <Property Name="billDueDtae" Type="varchar(max)" />
+    <Property Name="subTotal" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="discount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="grandTotal" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="quantity" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="rate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="stock_in_trade_id" Type="int" />
+    <Property Name="port_of_loading" Type="int" />
+    <Property Name="port_of_discharge" Type="int" />
+    <Property Name="currency_units_id" Type="int" />
+    <Property Name="stock_units_id" Type="int" />
+    <Property Name="gross_weight" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="no_of_installment" Type="varchar(max)" />
+    <Property Name="trade_type" Type="varchar(max)" />
+    <Property Name="currency_rate" Type="varchar(max)" />
+    <Property Name="vehicle_no" Type="varchar(max)" />
+    <Property Name="vendorbillNo" Type="varchar(max)" />
+    <Property Name="quantity_debit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="quantity_credit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="gate_inward_no" Type="varchar(max)" />
+    <Property Name="inspection_no" Type="varchar(max)" />
+    <Property Name="bags" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="recipt_entry_id" Type="int" />
+    <Property Name="finish_good_chart_id" Type="int" />
+    <Property Name="wastage" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="gate_outward_entry_id" Type="int" />
+    <Property Name="sale_tax" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="sale_taxtotal" Type="varchar(max)" />
+    <Property Name="fsale_tax" Type="varchar(max)" />
+    <Property Name="fsale_taxtotal" Type="varchar(max)" />
+    <Property Name="voucher_invoice" Type="varchar(max)" />
+    <Property Name="Particular" Type="varchar(max)" />
+    <Property Name="services_description" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="manual_journal_info">
+    <Key>
+      <PropertyRef Name="manual_journal_info_id" />
+    </Key>
+    <Property Name="manual_journal_info_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Reference" Type="varchar(max)" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="voucher_id" Type="int" />
+    <Property Name="autoentrydatetime" Type="datetime2" Precision="7" />
+    <Property Name="voucher_invoice" Type="varchar(max)" />
+    <Property Name="created_by" Type="varchar(max)" />
+    <Property Name="creatd_date" Type="varchar(max)" />
+    <Property Name="modified_by" Type="varchar(max)" />
+    <Property Name="modified_date" Type="varchar(max)" />
+    <Property Name="userip" Type="varchar(max)" />
+    <Property Name="modified_userip" Type="varchar(max)" />
+    <Property Name="status" Type="varchar(max)" />
+    <Property Name="gate_inward_outward_no" Type="varchar(max)" />
+    <Property Name="inspection_report_no" Type="varchar(max)" />
+    <Property Name="stock_store_recipt_no" Type="varchar(max)" />
+    <Property Name="raw_issue_no" Type="varchar(max)" />
+    <Property Name="wip_issue_no" Type="varchar(max)" />
+    <Property Name="store_Issue_no" Type="varchar(max)" />
+    <Property Name="warehouse_Issue_no" Type="varchar(max)" />
+    <Property Name="customer_invoice_no" Type="varchar(max)" />
+    <Property Name="finishgood_type" Type="varchar(max)" />
+    <Property Name="sale_invoice_no" Type="varchar(max)" />
+    <Property Name="purchase_invoice_no" Type="varchar(max)" />
+    <Property Name="stock_entry_date" Type="varchar(max)" />
+    <Property Name="post_dated_cheque_status" Type="varchar(max)" />
+    <Property Name="postdated_date" Type="varchar(max)" />
+    <Property Name="paid_status" Type="varchar(max)" />
+    <Property Name="vendor_chart_id" Type="int" />
+    <Property Name="login_id" Type="int" />
+    <Property Name="trade_type" Type="varchar(max)" />
+    <Property Name="billNo" Type="varchar(max)" />
+    <Property Name="chart_id1" Type="int" />
+  </EntityType>
+  <EntityType Name="packing_list">
+    <Key>
+      <PropertyRef Name="packing_list_id" />
+    </Key>
+    <Property Name="packing_list_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="no_of_bags" Type="varchar(max)" />
+    <Property Name="packing_list_date" Type="varchar(max)" />
+    <Property Name="tare_weight" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+    <Property Name="packing_list_invoiceNo" Type="varchar(max)" />
+    <Property Name="packing_list_container_no" Type="varchar(max)" />
+    <Property Name="packing_list_discription" Type="varchar(max)" />
+    <Property Name="packing_llist_gross_weight" Type="varchar(max)" />
+    <Property Name="manual_journal_entry_id" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="page_roles">
+    <Key>
+      <PropertyRef Name="pr_id" />
+    </Key>
+    <Property Name="pr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pr_title" Type="varchar(max)" />
+    <Property Name="pr_urls" Type="varchar(max)" />
+    <Property Name="module_id" Type="int" />
+    <Property Name="pr_date" Type="date" />
+  </EntityType>
+  <EntityType Name="payment_followup">
+    <Key>
+      <PropertyRef Name="payment_followup_id" />
+    </Key>
+    <Property Name="payment_followup_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="payment_amount" Type="varchar(max)" />
+    <Property Name="payment_date" Type="varchar(max)" />
+    <Property Name="chart_id" Type="varchar(max)" />
+    <Property Name="invoice_no" Type="varchar(max)" />
+    <Property Name="payment_status" Type="varchar(max)" />
+    <Property Name="payment_type" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+    <Property Name="autodatetime" Type="datetime" />
+    <Property Name="login_id" Type="int" />
+  </EntityType>
+  <EntityType Name="permission_role">
+    <Key>
+      <PropertyRef Name="permission_id" />
+    </Key>
+    <Property Name="permission_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pr_id" Type="int" />
+    <Property Name="role_id" Type="int" />
+    <Property Name="permission_action" Type="varchar(max)" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductPrice" Type="money" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="OrderDate" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DB_A660CB_accounts.dbo.SaleDetail' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SaleDetail">
+          <Property Name="SaleDetailId" Type="int" />
+          <Property Name="SaleId" Type="int" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="Quantity" Type="int" />
+        </EntityType>-->
+  <EntityType Name="shipping_ports">
+    <Key>
+      <PropertyRef Name="shipping_ports_id" />
+    </Key>
+    <Property Name="shipping_ports_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="port_name" Type="varchar(max)" />
+    <Property Name="country" Type="varchar(max)" />
+    <Property Name="countryShortName" Type="varchar(max)" />
+    <Property Name="autodatetime" Type="datetime2" Precision="7" />
+    <Property Name="login_id" Type="int" />
+  </EntityType>
+  <EntityType Name="stock_in_trade">
+    <Key>
+      <PropertyRef Name="stock_in_trade_id" />
+    </Key>
+    <Property Name="stock_in_trade_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat_name" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="stock_quantity">
+    <Key>
+      <PropertyRef Name="final_stock_in_trade_id" />
+    </Key>
+    <Property Name="final_stock_in_trade_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="manual_journal_entry_id" Type="int" />
+    <Property Name="manual_journal_info_id" Type="int" />
+    <Property Name="stock_in_trade_id" Type="int" />
+    <Property Name="finished_goods_names_id" Type="int" />
+    <Property Name="quantity" Type="varchar(max)" />
+    <Property Name="autodatetime" Type="datetime2" Precision="7" />
+    <Property Name="stock_source" Type="varchar(max)" />
+    <Property Name="sold_status" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Stock_recipt_attachments">
+    <Key>
+      <PropertyRef Name="attachment_id" />
+    </Key>
+    <Property Name="attachment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="manual_journal_info_id" Type="int" />
+  </EntityType>
+  <EntityType Name="stock_status_change">
+    <Key>
+      <PropertyRef Name="stock_status_change_id" />
+    </Key>
+    <Property Name="stock_status_change_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stock_in_trade_id" Type="int" />
+    <Property Name="autodatetime" Type="datetime2" Precision="7" />
+    <Property Name="chart_id" Type="int" />
+    <Property Name="manual_journal_info_id" Type="int" />
+    <Property Name="manual_journal_entry_id" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_A660CB_accounts.dbo.stock_types' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="stock_types">
+    <Key>
+      <PropertyRef Name="stock__type_id" />
+    </Key>
+    <Property Name="stock__type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_name" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="stock_units">
+    <Key>
+      <PropertyRef Name="stock_units_id" />
+    </Key>
+    <Property Name="stock_units_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stock_unit_name" Type="varchar(max)" />
+    <Property Name="autodatetime" Type="datetime2" Precision="7" />
+    <Property Name="login_id" Type="int" />
+  </EntityType>
+  <EntityType Name="tax">
+    <Key>
+      <PropertyRef Name="tax_id" />
+    </Key>
+    <Property Name="tax_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tax_name" Type="varchar(max)" />
+    <Property Name="tax_rate" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="temp_config">
+    <Key>
+      <PropertyRef Name="user_temp_design_id" />
+    </Key>
+    <Property Name="user_temp_design_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="login_id" Type="int" Nullable="false" />
+    <Property Name="tem_id" Type="int" Nullable="false" />
+    <Property Name="temp_status" Type="varchar(max)" />
+    <Property Name="background_color" Type="varchar(max)" />
+    <Property Name="font_style" Type="varchar(max)" />
+    <Property Name="handding_color" Type="varchar(max)" />
+    <Property Name="table_header_bg" Type="varchar(max)" />
+    <Property Name="company_text_color" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="temp_invoices_structure">
+    <Key>
+      <PropertyRef Name="temp_Invoice_id" />
+    </Key>
+    <Property Name="temp_Invoice_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tem_id" Type="int" Nullable="false" />
+    <Property Name="temp_Invoice_Name" Type="varchar(max)" />
+    <Property Name="header_div" Type="varchar(max)" />
+    <Property Name="invoice_div" Type="varchar(max)" />
+    <Property Name="table_div" Type="varchar(max)" />
+    <Property Name="footer_div" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="template_design">
+    <Key>
+      <PropertyRef Name="tem_id" />
+    </Key>
+    <Property Name="tem_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="body" Type="varchar(max)" />
+    <Property Name="status" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="transactions">
+    <Key>
+      <PropertyRef Name="transaction_id" />
+    </Key>
+    <Property Name="transaction_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="debit" Type="varchar(max)" />
+    <Property Name="credit" Type="varchar(max)" />
+    <Property Name="balance_debit" Type="varchar(max)" />
+    <Property Name="balance_credit" Type="varchar(max)" />
+    <Property Name="chart_id" Type="int" />
+    <Property Name="autoentrydatetime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="userroles">
+    <Key>
+      <PropertyRef Name="role_id" />
+    </Key>
+    <Property Name="role_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="role_name" Type="varchar(max)" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="voucherTypes">
+    <Key>
+      <PropertyRef Name="voucher_id" />
+    </Key>
+    <Property Name="voucher_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_name" Type="varchar(max)" />
+    <Property Name="abbreviation" Type="varchar(max)" />
+    <Property Name="status" Type="varchar(max)" />
+    <Property Name="autotime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_A660CB_accounts.dbo.ViewOpeningBalance' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ViewOpeningBalance">
+    <Key>
+      <PropertyRef Name="chart_id" />
+      <PropertyRef Name="transaction_id" />
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="account_name" Type="varchar(max)" />
+    <Property Name="account_code" Type="varchar(max)" />
+    <Property Name="chart_id" Type="int" Nullable="false" />
+    <Property Name="transaction_id" Type="int" Nullable="false" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="debit" Type="varchar(max)" />
+    <Property Name="credit" Type="varchar(max)" />
+    <Property Name="Expr1" Type="int" />
+    <Property Name="type_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Function Name="spGetHelpTextByKey" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HelpTextKey" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DB_A660CB_accountsModelStoreContainer">
+    <EntitySet Name="account_type" EntityType="Self.account_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="addmodules" EntityType="Self.addmodules" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="analysis_report" EntityType="Self.analysis_report" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="attachments" EntityType="Self.attachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bank_names" EntityType="Self.bank_names" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bl_company" EntityType="Self.bl_company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bl_documents_attachments" EntityType="Self.bl_documents_attachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cat_1" EntityType="Self.cat_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cat_2" EntityType="Self.cat_2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cat_3" EntityType="Self.cat_3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cat_4" EntityType="Self.cat_4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="certificate_of_origion_attachments" EntityType="Self.certificate_of_origion_attachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="chart_of_account" EntityType="Self.chart_of_account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="company_profile" EntityType="Self.company_profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="container" EntityType="Self.container" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Countries_Name" EntityType="Self.Countries_Name" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="currency_units" EntityType="Self.currency_units" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customer_info" EntityType="Self.customer_info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="email_request" EntityType="Self.email_request" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="finished_goods_names" EntityType="Self.finished_goods_names" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="genral_analysis_report" EntityType="Self.genral_analysis_report" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inspection_attechment" EntityType="Self.inspection_attechment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inspection_Products_entries" EntityType="Self.inspection_Products_entries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inspection_report_main" EntityType="Self.inspection_report_main" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inspection_tests" EntityType="Self.inspection_tests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inspection_tests_entries" EntityType="Self.inspection_tests_entries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="insurance_documents" EntityType="Self.insurance_documents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="insurance_documents_attachments" EntityType="Self.insurance_documents_attachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inward_gatepass_attachment" EntityType="Self.inward_gatepass_attachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inward_gatepass_entries" EntityType="Self.inward_gatepass_entries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inward_gatepass_main" EntityType="Self.inward_gatepass_main" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="manual_journal_entry" EntityType="Self.manual_journal_entry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="manual_journal_info" EntityType="Self.manual_journal_info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="packing_list" EntityType="Self.packing_list" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="page_roles" EntityType="Self.page_roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="payment_followup" EntityType="Self.payment_followup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="permission_role" EntityType="Self.permission_role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="shipping_ports" EntityType="Self.shipping_ports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stock_in_trade" EntityType="Self.stock_in_trade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stock_quantity" EntityType="Self.stock_quantity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock_recipt_attachments" EntityType="Self.Stock_recipt_attachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stock_status_change" EntityType="Self.stock_status_change" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stock_units" EntityType="Self.stock_units" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tax" EntityType="Self.tax" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="temp_config" EntityType="Self.temp_config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="temp_invoices_structure" EntityType="Self.temp_invoices_structure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="template_design" EntityType="Self.template_design" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transactions" EntityType="Self.transactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userroles" EntityType="Self.userroles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="voucherTypes" EntityType="Self.voucherTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stock_types" EntityType="Self.stock_types" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [stock_types].[stock__type_id] AS [stock__type_id], 
+    [stock_types].[type_name] AS [type_name]
+    FROM [dbo].[stock_types] AS [stock_types]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewOpeningBalance" EntityType="Self.ViewOpeningBalance" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewOpeningBalance].[account_name] AS [account_name], 
+    [ViewOpeningBalance].[account_code] AS [account_code], 
+    [ViewOpeningBalance].[chart_id] AS [chart_id], 
+    [ViewOpeningBalance].[transaction_id] AS [transaction_id], 
+    [ViewOpeningBalance].[description] AS [description], 
+    [ViewOpeningBalance].[debit] AS [debit], 
+    [ViewOpeningBalance].[credit] AS [credit], 
+    [ViewOpeningBalance].[Expr1] AS [Expr1], 
+    [ViewOpeningBalance].[type_id] AS [type_id]
+    FROM [dbo].[ViewOpeningBalance] AS [ViewOpeningBalance]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
