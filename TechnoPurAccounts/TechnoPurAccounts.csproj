@@ -288,6 +288,13 @@
     <Compile Include="Return_Order\add_emp.aspx.designer.cs">
       <DependentUpon>add_emp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Return_Order\add_new_return.aspx.cs">
+      <DependentUpon>add_new_return.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return_Order\add_new_return.aspx.designer.cs">
+      <DependentUpon>add_new_return.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -512,6 +519,7 @@
     <Content Include="Profile.aspx" />
     <Content Include="Return_Order\add_company.aspx" />
     <Content Include="Return_Order\add_emp.aspx" />
+    <Content Include="Return_Order\add_new_return.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />

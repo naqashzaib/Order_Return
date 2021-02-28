@@ -557,6 +557,7 @@ line-height: 10px!important;
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
                         <li><a href="../dashboard.aspx">Dashboard </a></li>
+                        <li><a href="../Profile.aspx">Profile </a></li>
                     </ul>
                 </li>
                 <li class="clsadmin">

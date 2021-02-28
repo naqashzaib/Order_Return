@@ -410,5 +410,69 @@ namespace TechnoPurAccounts.Controllers
             }
         }
 
+
+
+
+        public class ClsUpdatePassword
+        {
+            public int login_id { get; set; }
+            public string oldpassword   { get; set; }
+            public string newpassword { get; set; }
+        }
+        [Route("api/UpdatePassword")]
+        [HttpPut]
+        public HttpResponseMessage UpdatePassword([FromBody] ClsUpdatePassword objClsUpdatePassword)
+        {
+            DbContextTransaction transaction = db.Database.BeginTransaction();
+            try
+            {
+
+                var longin_table = (from comp in db.logins
+                                    where (comp.login_id == objClsUpdatePassword.login_id)
+                                    select comp).SingleOrDefault();
+
+           
+
+
+            
+
+                if (longin_table != null)
+                {
+
+                    if (longin_table.password==objClsUpdatePassword.oldpassword.GetMD5HashData())
+                    {
+
+                        var longin = (from comp in db.companies
+                                      where (comp.company_id == longin_table.company_id)
+                                      select comp).SingleOrDefault();
+                        longin.password = objClsUpdatePassword.newpassword;
+                        db.SaveChanges();
+
+                        longin_table.password = objClsUpdatePassword.newpassword.GetMD5HashData();
+                        db.SaveChanges();
+                        transaction.Commit();
+
+                        return Request.CreateResponse(HttpStatusCode.OK, "Updated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.NotFound, "Old Password Not Match");
+
+                    }
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Not Found");
+                }
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                var message = Request.CreateResponse(HttpStatusCode.InternalServerError);
+                return message;
+            }
+        }
+
+
     }
 }

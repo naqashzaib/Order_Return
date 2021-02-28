@@ -191,6 +191,7 @@
                          localStorage["username"] = value.username;
                          localStorage["role_id"] = value.role_id;
                          localStorage["login_id"] = value.login_id;
+                         localStorage["email"] = value.email;
                      });
                  }
              });
