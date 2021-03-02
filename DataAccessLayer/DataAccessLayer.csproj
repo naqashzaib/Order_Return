@@ -101,6 +101,12 @@
       <DependentUpon>Data_Module.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="returns_order.cs">
+      <DependentUpon>Data_Module.tt</DependentUpon>
+    </Compile>
+    <Compile Include="return_actions.cs">
+      <DependentUpon>Data_Module.tt</DependentUpon>
+    </Compile>
     <Compile Include="userrole.cs">
       <DependentUpon>Data_Module.tt</DependentUpon>
     </Compile>

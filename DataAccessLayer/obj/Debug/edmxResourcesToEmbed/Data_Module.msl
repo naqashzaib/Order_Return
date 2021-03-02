@@ -38,5 +38,36 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="returns_order">
+      <EntityTypeMapping TypeName="return_orderModel.returns_order">
+        <MappingFragment StoreEntitySet="returns_order">
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="return_no" ColumnName="return_no" />
+          <ScalarProperty Name="modified_datetime" ColumnName="modified_datetime" />
+          <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+          <ScalarProperty Name="attachment" ColumnName="attachment" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="rma" ColumnName="rma" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="reaturn_order_id" ColumnName="reaturn_order_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="return_actions">
+      <EntityTypeMapping TypeName="return_orderModel.return_actions">
+        <MappingFragment StoreEntitySet="return_actions">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="attachment" ColumnName="attachment" />
+          <ScalarProperty Name="reaturn_id" ColumnName="reaturn_id" />
+          <ScalarProperty Name="return_actions_id" ColumnName="return_actions_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

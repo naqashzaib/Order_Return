@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="return_orderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="return_orderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="company">
           <Key>
             <PropertyRef Name="company_id" />
@@ -31,6 +31,35 @@
           <Property Name="status" Type="varchar(max)" />
           <Property Name="company_id" Type="int" />
         </EntityType>
+        <EntityType Name="return_actions">
+          <Key>
+            <PropertyRef Name="return_actions_id" />
+          </Key>
+          <Property Name="return_actions_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="reaturn_id" Type="int" />
+          <Property Name="attachment" Type="varchar(max)" />
+          <Property Name="created_by" Type="int" />
+          <Property Name="created_datetime" Type="datetime" />
+          <Property Name="note" Type="varchar(max)" />
+          <Property Name="status" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="returns_order">
+          <Key>
+            <PropertyRef Name="reaturn_order_id" />
+          </Key>
+          <Property Name="reaturn_order_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="customer_name" Type="varchar(max)" />
+          <Property Name="rma" Type="varchar(max)" />
+          <Property Name="note" Type="varchar(max)" />
+          <Property Name="attachment" Type="varchar(max)" />
+          <Property Name="created_datetime" Type="datetime" />
+          <Property Name="modified_datetime" Type="datetime" />
+          <Property Name="return_no" Type="int" />
+          <Property Name="status" Type="varchar(max)" />
+          <Property Name="created_by" Type="int" />
+          <Property Name="modified_by" Type="int" />
+        </EntityType>
         <EntityType Name="userroles">
           <Key>
             <PropertyRef Name="role_id" />
@@ -42,10 +71,11 @@
         <EntityContainer Name="return_orderModelStoreContainer">
           <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="return_actions" EntityType="Self.return_actions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="returns_order" EntityType="Self.returns_order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="userroles" EntityType="Self.userroles" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="return_orderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -87,7 +117,38 @@
           <EntitySet Name="companies" EntityType="Self.company" />
           <EntitySet Name="logins" EntityType="Self.login" />
           <EntitySet Name="userroles" EntityType="Self.userrole" />
+          <EntitySet Name="returns_order" EntityType="return_orderModel.returns_order" />
+          <EntitySet Name="return_actions" EntityType="return_orderModel.return_actions" />
         </EntityContainer>
+        <EntityType Name="returns_order">
+          <Key>
+            <PropertyRef Name="reaturn_order_id" />
+          </Key>
+          <Property Name="reaturn_order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="customer_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="rma" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="attachment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="created_datetime" Type="DateTime" Precision="3" />
+          <Property Name="modified_datetime" Type="DateTime" Precision="3" />
+          <Property Name="return_no" Type="Int32" />
+          <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="created_by" Type="Int32" />
+          <Property Name="modified_by" Type="Int32" />
+        </EntityType>
+        <EntityType Name="return_actions">
+          <Key>
+            <PropertyRef Name="return_actions_id" />
+          </Key>
+          <Property Name="return_actions_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="reaturn_id" Type="Int32" />
+          <Property Name="attachment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="created_by" Type="Int32" />
+          <Property Name="created_datetime" Type="DateTime" Precision="3" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -128,6 +189,37 @@
                 <ScalarProperty Name="role_id" ColumnName="role_id" />
                 <ScalarProperty Name="role_name" ColumnName="role_name" />
                 <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="returns_order">
+            <EntityTypeMapping TypeName="return_orderModel.returns_order">
+              <MappingFragment StoreEntitySet="returns_order">
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="return_no" ColumnName="return_no" />
+                <ScalarProperty Name="modified_datetime" ColumnName="modified_datetime" />
+                <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+                <ScalarProperty Name="attachment" ColumnName="attachment" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="rma" ColumnName="rma" />
+                <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="reaturn_order_id" ColumnName="reaturn_order_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="return_actions">
+            <EntityTypeMapping TypeName="return_orderModel.return_actions">
+              <MappingFragment StoreEntitySet="return_actions">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="created_datetime" ColumnName="created_datetime" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="attachment" ColumnName="attachment" />
+                <ScalarProperty Name="reaturn_id" ColumnName="reaturn_id" />
+                <ScalarProperty Name="return_actions_id" ColumnName="return_actions_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

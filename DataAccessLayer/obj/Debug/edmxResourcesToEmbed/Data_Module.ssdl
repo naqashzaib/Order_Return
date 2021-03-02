@@ -26,6 +26,35 @@
     <Property Name="status" Type="varchar(max)" />
     <Property Name="company_id" Type="int" />
   </EntityType>
+  <EntityType Name="return_actions">
+    <Key>
+      <PropertyRef Name="return_actions_id" />
+    </Key>
+    <Property Name="return_actions_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="reaturn_id" Type="int" />
+    <Property Name="attachment" Type="varchar(max)" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="created_datetime" Type="datetime" />
+    <Property Name="note" Type="varchar(max)" />
+    <Property Name="status" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="returns_order">
+    <Key>
+      <PropertyRef Name="reaturn_order_id" />
+    </Key>
+    <Property Name="reaturn_order_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company_id" Type="int" />
+    <Property Name="customer_name" Type="varchar(max)" />
+    <Property Name="rma" Type="varchar(max)" />
+    <Property Name="note" Type="varchar(max)" />
+    <Property Name="attachment" Type="varchar(max)" />
+    <Property Name="created_datetime" Type="datetime" />
+    <Property Name="modified_datetime" Type="datetime" />
+    <Property Name="return_no" Type="int" />
+    <Property Name="status" Type="varchar(max)" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modified_by" Type="int" />
+  </EntityType>
   <EntityType Name="userroles">
     <Key>
       <PropertyRef Name="role_id" />
@@ -37,6 +66,8 @@
   <EntityContainer Name="return_orderModelStoreContainer">
     <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="return_actions" EntityType="Self.return_actions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="returns_order" EntityType="Self.returns_order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="userroles" EntityType="Self.userroles" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -8,6 +8,8 @@
         <EntityTypeShape EntityType="return_orderModel.company" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="return_orderModel.login" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="return_orderModel.userrole" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="return_orderModel.returns_order" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="return_orderModel.return_actions" Width="1.5" PointX="5.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

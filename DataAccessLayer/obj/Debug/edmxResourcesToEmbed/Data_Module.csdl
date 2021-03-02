@@ -38,5 +38,36 @@
     <EntitySet Name="companies" EntityType="Self.company" />
     <EntitySet Name="logins" EntityType="Self.login" />
     <EntitySet Name="userroles" EntityType="Self.userrole" />
+    <EntitySet Name="returns_order" EntityType="return_orderModel.returns_order" />
+    <EntitySet Name="return_actions" EntityType="return_orderModel.return_actions" />
   </EntityContainer>
+  <EntityType Name="returns_order">
+    <Key>
+      <PropertyRef Name="reaturn_order_id" />
+    </Key>
+    <Property Name="reaturn_order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="Int32" />
+    <Property Name="customer_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rma" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="attachment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created_datetime" Type="DateTime" Precision="3" />
+    <Property Name="modified_datetime" Type="DateTime" Precision="3" />
+    <Property Name="return_no" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modified_by" Type="Int32" />
+  </EntityType>
+  <EntityType Name="return_actions">
+    <Key>
+      <PropertyRef Name="return_actions_id" />
+    </Key>
+    <Property Name="return_actions_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="reaturn_id" Type="Int32" />
+    <Property Name="attachment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="created_datetime" Type="DateTime" Precision="3" />
+    <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

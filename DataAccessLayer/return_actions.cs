@@ -15,26 +15,22 @@ namespace DataAccessLayer
 using System;
     using System.Collections.Generic;
     
-public partial class login
+public partial class return_actions
 {
 
-    public int login_id { get; set; }
+    public int return_actions_id { get; set; }
 
-    public string username { get; set; }
+    public Nullable<int> reaturn_id { get; set; }
 
-    public string password { get; set; }
+    public string attachment { get; set; }
 
-    public string email { get; set; }
+    public Nullable<int> created_by { get; set; }
 
-    public Nullable<int> role_id { get; set; }
+    public Nullable<System.DateTime> created_datetime { get; set; }
 
-    public Nullable<System.DateTime> date { get; set; }
-
-    public string forgot_key { get; set; }
+    public string note { get; set; }
 
     public string status { get; set; }
-
-    public Nullable<int> company_id { get; set; }
 
 }
 
